@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   # Route for displaying the top anime list
   get 'anime/top', to: 'anime#top_anime'
   
-  # Route for showing anime details by ID
-  get 'anime/:id', to: 'anime#show', as: 'anime'
-  
   # Route for displaying seasonal anime
   get 'anime/seasonal', to: 'anime#seasonal_anime', as: 'seasonal_anime'
+
+  # Route for showing anime details by ID
+  get 'anime/:id', to: 'anime#show', as: 'anime'
 
 end

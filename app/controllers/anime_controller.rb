@@ -6,7 +6,7 @@ class AnimeController < ApplicationController
   
     def show
         anime_id = params[:id] 
-        @anime_details = @client.get_anime_details(anime_id)
+        @anime = @client.get_anime_details(anime_id)[:body]
     end
   
     def seasonal_anime

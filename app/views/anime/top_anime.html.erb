@@ -1,8 +1,8 @@
 <h1>Top Anime</h1>
 <%= link_to "Spring Anime", seasonal_anime_path %>
-<div id="container">
+<div class="container">
     <% @top_10_anime["data"].each do |anime| %>
-        <div id="anime-card">
+        <div class="anime-card">
             <h2><%= anime["node"]["title"] %></h2>
             <p>Rank: <%= anime["ranking"]["rank"] %></p>
             <p>ID: <%= anime["node"]["id"] %></p>
