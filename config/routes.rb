@@ -5,6 +5,14 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  root to: 'anime#top_anime'
+  # Route for displaying the top anime list
+  get 'anime/top', to: 'anime#top_anime'
+  
+  # Route for showing anime details by ID
+  get 'anime/:id', to: 'anime#show', as: 'anime'
+  
+  # Route for displaying seasonal anime
+  get 'anime/seasonal', to: 'anime#seasonal_anime', as: 'seasonal_anime'
+
 end

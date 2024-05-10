@@ -1,0 +1,14 @@
+<h1>Spring 2023 Anime</h1>
+<%= link_to "Top 10 Anime", top_anime_path %>
+
+<div id="container">
+    <% @seasonal_anime["data"].each do |anime| %>
+        <div id="anime-card">
+            <h2><%= anime["node"]["title"] %></h2>
+            <p>Rank: <%= anime["ranking"]["rank"] %></p>
+            <p>ID: <%= anime["node"]["id"] %></p>
+            <img src="<%= anime["node"]["main_picture"]["medium"] %>" alt="<%= anime["node"]["title"] %>">
+            <%= link_to "Show Details", anime_path(anime["node"]["id"]) %>
+        </div>
+    <% end %>
+</div>

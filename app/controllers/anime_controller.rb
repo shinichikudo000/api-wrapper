@@ -1,6 +1,7 @@
 class AnimeController < ApplicationController
     def top_anime
-        @top_10_anime = @client.get_top_anime(10, 'all')
+        @anime = @client.get_top_anime(10, 'all')
+        @top_10_anime = @anime[:body]
     end
   
     def show
@@ -9,6 +10,8 @@ class AnimeController < ApplicationController
     end
   
     def seasonal_anime
-        @seasonal_anime = @client.get_seasonal_anime(10, 'spring', 2023)
+        @anime = @client.get_seasonal_anime(10, 'spring', 2023)
+        @seasonal_anime = @anime[:body]
+        render 'seasonal_anime'
     end
 end

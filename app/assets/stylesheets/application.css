@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+ #container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #anime-card{
+    width: 20%;
+    padding: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+ }
+
+#anime-card img {
+    height: 400px;
+    width: 100%;
+    object-fit: fill;
+}

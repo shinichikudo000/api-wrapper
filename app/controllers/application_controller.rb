@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     private
 
     def initialize_controller
-        client_id = ENV[CLIENT_ID]
+        client_id = ENV["CLIENT_ID"]
         @client ||= MyAnimeList::V2::Client.new(client_id)
     end
 end

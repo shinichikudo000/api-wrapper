@@ -68,3 +68,5 @@ end
 
 
 gem 'faraday'
+
+gem 'dotenv-rails', groups: [:development, :test]
